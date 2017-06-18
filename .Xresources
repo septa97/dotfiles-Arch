@@ -1,0 +1,41 @@
+URxvt.font: xft:Consolas:size=10, xft:Inconsolata for Powerline
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+URxvt.transparent: true
+URxvt.shading: 30
+
+! Base16 Atelier Sulphurpool
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
+
+URxvt*background:                     #202746
+URxvt*foreground:                     #979db4
+URxvt*cursorColor:                    #979db4
+
+URxvt*scrollColor:                    #979db4
+URxvt*highlightColor:                 #5e6687
+URxvt*highlightTextColor:             #898ea4
+
+URxvt*color0:                         #202746
+URxvt*color1:                         #c94922
+URxvt*color2:                         #ac9739
+URxvt*color3:                         #c08b30
+URxvt*color4:                         #3d8fd1
+URxvt*color5:                         #6679cc
+URxvt*color6:                         #22a2c9
+URxvt*color7:                         #979db4
+URxvt*color8:                         #6b7394
+URxvt*color9:                         #c94922
+URxvt*color10:                        #ac9739
+URxvt*color11:                        #c08b30
+URxvt*color12:                        #3d8fd1
+URxvt*color13:                        #6679cc
+URxvt*color14:                        #22a2c9
+URxvt*color15:                        #f5f7ff
+
+URxvt*color16:                        #c76b29
+URxvt*color17:                        #9c637a
+URxvt*color18:                        #293256
+URxvt*color19:                        #5e6687
+URxvt*color20:                        #898ea4
+URxvt*color21:                        #dfe2f1
+
