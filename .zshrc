@@ -87,3 +87,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # For dotfiles management
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Ruby configuration
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# added by travis gem
+[ -f /home/septa97/.travis/travis.sh ] && source /home/septa97/.travis/travis.sh
