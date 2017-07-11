@@ -87,6 +87,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # For dotfiles management
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias youtube-dl-audio='/usr/bin/youtube-dl --extract-audio --audio-format mp3'
 
 # Ruby configuration
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
