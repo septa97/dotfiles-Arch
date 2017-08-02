@@ -86,11 +86,33 @@ source $ZSH/oh-my-zsh.sh
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # For dotfiles management
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Download youtube videos as mp3 format
 alias youtube-dl-audio='/usr/bin/youtube-dl --extract-audio --audio-format mp3'
+
+# Run osu!
+alias osu!="/usr/bin/wine $HOME/win32/drive_c/users/septa97/Local\ Settings/Application\ Data/osu\!/osu\!.exe"
+
+# Fix npm permissions
+alias npm-fix-permissions="sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}"
+
+# mv
+alias mv='timeout 8 mv -iv'
 
 # Ruby configuration
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # added by travis gem
 [ -f /home/septa97/.travis/travis.sh ] && source /home/septa97/.travis/travis.sh
+
+# Tensorflow
+export PATH=/usr/local/cuda${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# Use vim key binding
+bindkey -v
+
+# Wine (32-bit)
+export WINEPREFIX="$HOME/win32"
+export WINEARCH=win32
