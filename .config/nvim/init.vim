@@ -6,7 +6,7 @@ filetype off                  " required
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Make sure you use single quotes
+" Third-party packages
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'prettier/vim-prettier', { 
@@ -14,6 +14,7 @@ Plug 'prettier/vim-prettier', {
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()
