@@ -95,7 +95,17 @@ alias youtube-dl-audio='/usr/bin/youtube-dl --extract-audio --audio-format mp3'
 alias osu!="/usr/bin/wine $HOME/win32/drive_c/users/septa97/Local\ Settings/Application\ Data/osu\!/osu\!.exe"
 
 # Fix npm permissions
-alias npm-fix-permissions="sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}"
+npm-fix-permissions() {
+    if [[ $(npm config get prefix) == '/usr/local' ]]
+    then
+        alias npm-fix-permissions="sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}"
+    else
+        echo "NPM global prefix is not set to '/usr/local'. Aborting operation."
+    fi
+}
+
+# egrep
+alias egrep='egrep --color=always'
 
 # mv
 alias mv='timeout 8 mv -iv'
@@ -116,3 +126,15 @@ bindkey -v
 # Wine (32-bit)
 export WINEPREFIX="$HOME/win32"
 export WINEARCH=win32
+
+# Java
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Android SDK
+export ANDROID_HOME="$HOME/Android/Sdk"
+
+# Import colorscheme from 'wal'
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(wal -r &)
