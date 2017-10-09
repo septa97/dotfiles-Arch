@@ -39,7 +39,7 @@ let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#parser = 'babylon'
-autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql Prettier
+autocmd BufWritePre *.js,*.tsx,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
